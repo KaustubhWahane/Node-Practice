@@ -1,6 +1,3 @@
-const getPost = (req, res) =>{
-    res.send('Hello but from Route method')
-}
-module.exports = {
-    getPost
+exports.getPosts= (req, res) =>{
+    res.send("Hello from Morgan method")
 }
