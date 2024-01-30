@@ -3,6 +3,22 @@ const router = express.Router();
 const path = require('path');
 const fs = require('fs').promises;
 
+const logTimeMiddleware = (req, res, next) => {
+  const startTime = new Date();
+
+  res.once('finish', () => {
+    const endTime = new Date();
+    const elapsedTime = endTime - startTime;
+
+    console.log(`[${new Date()}] ${req.method} ${req.originalUrl} - Time Taken: ${elapsedTime}ms`);
+  });
+
+  // Continue with the next middleware or route handler
+  next();
+};
+
+router.use(logTimeMiddleware);
+
 router.use(express.static('public'));
 
 router.get('/', async (req, res) => {
@@ -30,11 +46,11 @@ router.get('/:id', async (req, res) => {
     if (user) {
       res.json(user);
     } else {
-      res.status(500).send("Aesa koi user nahi hai!");
+      res.status(404).send("Aesa koi user nahi hai!");
     }
   } catch (error) {
     console.error('Error reading this file:', error.message);
-    res.status(500).send('Kya likha hai tune bhai');
+    res.status(404).send('File read error');
   }
 });
 

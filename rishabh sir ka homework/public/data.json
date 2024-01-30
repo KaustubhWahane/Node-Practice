@@ -1,10 +1,40 @@
 {
-    "users": [
-      { "id": 1, "name": "Rishabh sir", "email": "rishabh@example.com", "password": "sir123" },
-      { "id": 2, "name": "Majdur", "email": "majdur@example.com", "password": "hardwork456" },
-      { "id": 3, "name": "Aapki gf ka naam kya hai", "email": "gf@example.com", "password": "secretlove789" },
-      { "id": 4, "name": "Party kab de rhe ho", "email": "partyhost@example.com", "password": "celebrate123" },
-      { "id": 5, "name": "Kaustubh ne nahi banaya hai", "email": "kaustubh@example.com", "password": "notmadebykaustubh456" }
-    ]
-  }
-  
+  "users": [
+    {
+      "id": 1,
+      "name": "Rishabh sir",
+      "email": "rishabh@example.com",
+      "password": "sir123"
+    },
+    {
+      "id": 2,
+      "name": "Majdur",
+      "email": "majdur@example.com",
+      "password": "hardwork456"
+    },
+    {
+      "id": 3,
+      "name": "Aapki koi GF hai?",
+      "email": "gf@example.com",
+      "password": "secretlove789"
+    },
+    {
+      "id": 4,
+      "name": "Party kab de rhe ho",
+      "email": "partyhost@example.com",
+      "password": "celebrate123"
+    },
+    {
+      "id": 5,
+      "name": "Kaustubh ne nahi banaya hai",
+      "email": "kaustubh@example.com",
+      "password": "notmadebykaustubh456"
+    },
+    {
+      "id": 6,
+      "name": "Me postman se kiya hua naya user hu",
+      "email": "nayauser69@gmail.com",
+      "password": "securepassword123"
+    }
+  ]
+}
